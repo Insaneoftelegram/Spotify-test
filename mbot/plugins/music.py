@@ -38,13 +38,14 @@ async def download_songs(query, download_directory='.'):
             pass
             print(e)
     return video 
-    
+
 SONG_BUTTONS =[[
     InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url="https://t.me/Resso_official_bot?startgroup=true")
     ],[
     InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="t.me/INSANEX3"),
     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/INSANEX3_SUPPORT")
     ]]
+    
 
 @Mbot.on_message(
     filters.command('song') 
@@ -67,8 +68,9 @@ async def song(_, message):
           await message.reply_chat_action(enums.ChatAction.RECORD_AUDIO)
           path = await download_songs(query,randomdir)
           await message.reply_chat_action(enums.ChatAction.UPLOAD_AUDIO)
-          await k.edit('uploading')
+          await k.edit('uploading.................')
           await message.reply_audio(path)
+          await reply_markup =InlineKeyboardMarkup (SONG_BUTTONS)
       
       except IndexError:
           await message.reply("song requies an argument `eg /song faded`")
