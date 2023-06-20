@@ -1,3 +1,5 @@
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from random import randint 
 from yt_dlp import YoutubeDL
 from requests import get
@@ -37,7 +39,12 @@ async def download_songs(query, download_directory='.'):
             print(e)
     return video 
     
-
+SONG_BUTTONS =[[
+    InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url="https://t.me/Resso_official_bot?startgroup=true")
+    ],[
+    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="t.me/INSANEX3"),
+    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/INSANEX3_SUPPORT")
+    ]]
 
 @Mbot.on_message(
     filters.command('song') 
