@@ -1,3 +1,5 @@
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from random import randint 
 from yt_dlp import YoutubeDL
 from requests import get
