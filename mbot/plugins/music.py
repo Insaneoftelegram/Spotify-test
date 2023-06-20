@@ -36,6 +36,13 @@ async def download_songs(query, download_directory='.'):
             pass
             print(e)
     return video 
+SONG_BUTTONS =[[
+    InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url="https://t.me/Resso_official_bot?startgroup=true")
+    ],[
+    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="t.me/INSANEX3"),
+    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/INSANEX3_SUPPORT")
+    ]]
+
 
 @Mbot.on_message(
     filters.command('song') 
